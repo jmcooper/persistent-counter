@@ -1,10 +1,15 @@
+const counterRepository = require('counter-repository')
+
 module.exports = {
   increment(counterName) {
     let newCounter
-      newCounter = {
-        name: counterName,
-        count: 1
-      }
+    // const counter = counterRepository.getCounter(counterName)
+
+    newCounter = {
+      name: counterName,
+      count: 1
+    }
+    
     return newCounter       
 
   }
