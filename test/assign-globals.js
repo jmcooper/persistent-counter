@@ -2,17 +2,14 @@
 
 const chai = require('chai')
 const chaiAsPromised = require('chai-as-promised')
-const sinon = require('sinon')
 const td = require('testdouble')
 
-require('sinon-as-promised')
 chai.use(chaiAsPromised)
 td.config({ignoreWarnings: true})
 
 Object.assign(global, {
   assert: chai.assert,
   expect: chai.expect,
-  sinon,
   td
 })
 
